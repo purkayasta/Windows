@@ -1,5 +1,8 @@
-Import-Module .\modules\custom-winget-packages.psm1;
+Import-Module .\modules\packages.psm1;
 
 
-InstallVisualStudioCode
 
+foreach ($i in GetRecommandedApps)
+{
+    Write-Host $i
+}

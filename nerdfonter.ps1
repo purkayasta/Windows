@@ -8,10 +8,6 @@ $pre_installed_font = "C:\Fonter\";
 # Unzip the font into a fixed location
 # Install the fonts from that location
 
-Get-Command -Name Unzip
-Get-Command -Name InstallFonts
-
-
 $base_url = "https://github.com/ryanoasis/nerd-fonts/releases/download/";
 $version = "v3.0.2/"
 $font_name = "CodeNewRoman"
