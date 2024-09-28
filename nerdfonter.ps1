@@ -1,10 +1,24 @@
+
+Import-Module .\modules\unzip.psm1;
+Import-Module .\modules\register_font.psm1;
+
+$pre_installed_font = "C:\Fonter\";
+
+# Download the font files
+# Unzip the font into a fixed location
+# Install the fonts from that location
+
+Get-Command -Name Unzip
+Get-Command -Name InstallFonts
+
+
 $base_url = "https://github.com/ryanoasis/nerd-fonts/releases/download/";
 $version = "v3.0.2/"
 $font_name = "CodeNewRoman"
 $file_extension = ".zip"
 
 
-$download_location = "c:\FontDownloader\"
+# $download_location = "C:\Fonter\"
 
 # detect the operating system
 # take input from user.
@@ -23,7 +37,6 @@ function getDownloadableUrl {
 
 function getDestinationUrl {
     param ($location, $fontname, $extension)
-    
     return $location + $fontname + $extension
 }
 
